@@ -3,13 +3,13 @@ $(document).ready(function(){
 	renderButtons(topicButtons, $buttonViewsDiv);
 
 	$addTopicButton.on("click", function(event) {
-	  event.preventDefault();
-	  let topic = $inputBox.val().trim();
-	  if(topic.length > 0) {
-	  	topicButtons.push(topic);
-	  }
-	  renderButtons(topicButtons, $buttonViewsDiv);
-	  $inputBox.val("");
+		event.preventDefault();
+		let topic = $inputBox.val().trim();
+		if(topic.length > 0) {
+			topicButtons.push(topic);
+		}
+		renderButtons(topicButtons, $buttonViewsDiv);
+		$inputBox.val("");
 	});
 
 	$(document).on("click", ".topic-button", function(event){
