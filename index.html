@@ -12,19 +12,25 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
   <body>
-    <div id="buttons-view"></div>
+    <nav class="navbar giphy-nav">GifTastic</nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12" id="buttons-view"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="topic-form" class="col-xs-6 col-xs-offset-3 giphy-form">
+            <label for="topic-input">Add a Topic Bro</label>
+            <input type="text" id="topic-input">
 
-    <form id="topic-form">
-      <label for="topic-input">Add a Topic Bro</label>
-      <input type="text" id="topic-input"><br>
+            <!-- Button triggers new movie to be added -->
+            <input id="add-topic" type="submit" value="Add Topic" class="btn btn-success giphy-button">
+          </form>
+        </div>
+      </div>
+      <div id="giphy-view" class="row"></div>
+    </div>
 
-      <!-- Button triggers new movie to be added -->
-      <input id="add-topic" type="submit" value="Add a Topic Bro">
-    </form>
-
-    <div id="giphy-view"></div>
-    
-  
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
     <script src="./assets/javascript/data.js" type="text/javascript"></script>
